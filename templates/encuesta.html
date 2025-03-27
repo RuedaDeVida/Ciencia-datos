@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Encuesta</title>
+</head>
+<body>
+    <h2>Respuestas de la Encuesta</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Salud</th>
+            <th>Desarrollo</th>
+            <th>Amistad</th>
+            <th>hogar</th>
+            <th>Amor</th>
+            <th>Ocio</th>
+            <th>Carrera</th>
+            <th>Dinero</th>
+        </tr>
+        {% for row in datos %}
+        <tr>
+            <td>{{ row[0] }}</td>  <!-- ID -->
+            <td>{{ row[1] }}</td>  <!-- Nombre -->
+            <td>{{ row[2] }}</td>  <!-- Edad -->
+            <td>{{ row[3] }}</td>  <!-- Salud -->
+            <td>{{ row[4] }}</td>  <!-- Desarrollo -->
+            <td>{{ row[5] }}</td>  <!-- Amistad -->
+            <td>{{ row[6] }}</td>  <!-- Familia -->
+            <td>{{ row[7] }}</td>  <!-- Amor -->
+            <td>{{ row[8] }}</td>  <!-- Ocio -->
+            <td>{{ row[9] }}</td>  <!-- Carrera -->
+            <td>{{ row[10] }}</td> <!-- Dinero -->
+        </tr>
+        
+        {% endfor %}
+    </table>
+    
+    <br>
+    <a href="/">Volver</a>
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Nosotros</h1>
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="{{ url_for('nosotros') }}">Nosotros</a>
+            <a href="{{ url_for('contacto') }}">Contacto</a>
+            <a href="{{ url_for('persona') }}">Evaluacion</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Misión y Visión</h2>
+        <p>Somos una empresa dedicada a la mejora del bienestar de las personas, ofreciendo herramientas para evaluar y equilibrar las diferentes áreas de la vida.</p>
+    </main>
+    <footer>
+        <p>&copy; 2025 Rueda de la Vida</p>
+    </footer>
+</body>
+</html>

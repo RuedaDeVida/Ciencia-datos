@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <link rel="stylesheet" href="/static/css/styles.css">    
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a la Rueda de la Vida</h1>
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="{{ url_for('nosotros') }}">Nosotros</a>
+            <a href="{{ url_for('contacto') }}">Contacto</a>
+            <a href="{{ url_for('persona') }}">Evaluacion</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Introducción</h2>
+            <p>Bienvenido a nuestra página de evaluación de la rueda de la vida. Aquí podrás completar una evaluación que te ayudará a entender mejor tu equilibrio entre diferentes áreas de tu vida.</p>
+        </section>
+    </main>
+
+<p><a href="{{ url_for('persona') }}" target="_blank">Visita el formulario</a></p>
+<footer>
+    <p>&copy; 2025 Rueda de la Vida</p>
+</footer>
+</body>
+</html>

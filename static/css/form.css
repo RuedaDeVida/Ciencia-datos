@@ -1,0 +1,107 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #2E8B57, #4CAF50);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Título */
+.form-container h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Etiquetas */
+.form-container label {
+    font-size: 16px;
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Inputs */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="number"],
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Placeholder color */
+::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Efecto al enfocar */
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+/* Botón */
+.form-container button {
+    background: #FFD700;
+    color: #2E8B57;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Efecto hover del botón */
+.form-container button:hover {
+    background: #FFA500;
+}
+
+/* Enlace */
+.form-container a {
+    display: block;
+    margin-top: 15px;
+    color: #FFD700;
+    text-decoration: none;
+}
+
+/* Responsivo */
+@media (max-width: 450px) {
+    .form-container {
+        width: 90%;
+    }
+}
+

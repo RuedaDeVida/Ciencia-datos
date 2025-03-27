@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evaluación de la Rueda de la Vida</title>
+    <link rel="stylesheet" href="/static/css/form.css">
+</head>
+<body>
+    <h1>Evaluación de la Rueda de la Vida</h1>
+    <form action="{{ url_for('procesar') }}" method="POST">
+
+        <fieldset>
+            <legend>Información Personal</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required><br><br>
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Rueda de la Vida</legend>
+            <p>Califica tu nivel de satisfacción en cada área (1: Muy insatisfecho, 10: Muy satisfecho):</p>
+
+            <label for="salud">Salud:</label>
+            <input type="number" id="salud" name="salud" min="1" max="10" required><br><br>
+
+            <label for="dinero">Dinero:</label>
+            <input type="number" id="dinero" name="dinero" min="1" max="10" required><br><br>
+
+            <label for="amor">Amor:</label>
+            <input type="number" id="amor" name="amor" min="1" max="10" required><br><br>
+
+            <label for="amistad">Amistad:</label>
+            <input type="number" id="amistad" name="amistad" min="1" max="10" required><br><br>
+
+            <label for="familia">Hogar:</label>
+            <input type="number" id="hogar" name="hogar" min="1" max="10" required><br><br>
+
+            <label for="carrera">Trabajo:</label>
+            <input type="number" id="trabajo" name="trabajo" min="1" max="10" required><br><br>
+
+            <label for="desarrollo">Desarrollo Personal:</label>
+            <input type="number" id="desarrollo" name="desarrollo" min="1" max="10" required><br><br>
+
+            <label for="ocio">Ocio:</label>
+            <input type="number" id="ocio" name="ocio" min="1" max="10" required> <br><br>
+        </fieldset>
+         <button type="submit">Enviar</button>
+       
+    </form>
+    <!-- <form id="evaluacionForm" action="/procesar" method="POST">
+        <button type="submit">Enviar Evaluación</button>
+    </form> -->
+    
+    
+    <p><a href="{{ url_for('index') }}" target="_blank">regresar al inicio</a></p>    
+      
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensajes Recibidos</title>
+    <link rel="stylesheet" href="/static/css/mensaje.css">
+</head>
+<body>
+    <header>
+        <h1>Mensajes Recibidos</h1>
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="/nosotros">Nosotros</a>
+            <a href="/contacto">Contacto</a>
+            <a href="{{ url_for('persona') }}">Evaluacion</a>
+        </nav>
+    </header>
+    <main>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo Electrónico</th>
+                <th>Mensaje</th>
+            </tr>
+            {% for mensaje in mensajes %}
+            <tr>
+                <td>{{ mensaje[0] }}</td>
+                <td>{{ mensaje[1] }}</td>
+                <td>{{ mensaje[2] }}</td>
+                <td>{{ mensaje[3] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2025 Rueda de la Vida</p>
+    </footer>
+</body>
+</html>
