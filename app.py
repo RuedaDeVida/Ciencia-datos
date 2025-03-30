@@ -11,8 +11,8 @@ app = Flask(__name__)
 def get_db_connection():
     return pymysql.connect(
         host="localhost",
-        user="root",  # Cambia según tu configuración
-        password="",  # Cambia según tu configuración
+        user="root",  
+        password="",  
         database="encuesta"
     )
 
