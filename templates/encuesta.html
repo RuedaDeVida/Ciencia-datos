@@ -2,10 +2,20 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encuesta</title>
+    <link rel="stylesheet" href="/static/css/encuesta.css">
 </head>
 <body>
-    <h2>Respuestas de la Encuesta</h2>
+    <header>
+        <h1>Respuestas de la Encuesta</h1>
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="/nosotros">Nosotros</a>
+            <a href="/contacto">Contacto</a>
+            <a href="{{ url_for('persona') }}">Evaluacion</a>
+        </nav>
+    </header>
     <table border="1">
         <tr>
             <th>ID</th>
@@ -17,7 +27,7 @@
             <th>hogar</th>
             <th>Amor</th>
             <th>Ocio</th>
-            <th>Carrera</th>
+            <th>Trabajo</th>
             <th>Dinero</th>
         </tr>
         {% for row in datos %}
@@ -38,7 +48,7 @@
         {% endfor %}
     </table>
     
-    <br>
+    
     <a href="/">Volver</a>
 </body>
 </html>

@@ -16,7 +16,7 @@
             <a href="{{ url_for('persona') }}">Evaluacion</a>
         </nav>
     </header>
-    <main>
+    <main><br>
         <table border="1">
             <tr>
                 <th>ID</th>
@@ -33,6 +33,9 @@
             </tr>
             {% endfor %}
         </table>
+        <div class="piepag">
+            <p><a href="{{ url_for('contacto') }}" target="_blank">Regresar a contacto</a></p>    
+            </div>
     </main>
     <footer>
         <p>&copy; 2025 Rueda de la Vida</p>

@@ -18,14 +18,24 @@
     </header>
     <main>
         <section>
-            <h2>Introducción</h2>
-            <p>Bienvenido a nuestra página de evaluación de la rueda de la vida. Aquí podrás completar una evaluación que te ayudará a entender mejor tu equilibrio entre diferentes áreas de tu vida.</p>
+            <div class="nota">
+                <h2>Introducción</h2>
+                <p>Bienvenido a nuestra página de evaluación de la rueda de la vida. Aquí podrás completar una evaluación que te ayudará a entender mejor tu equilibrio entre diferentes áreas de tu vida. <br><br>Es una herramienta visual de coaching personal que facilita la obtención de una visión gráfica de los aspectos que componen nuestra vida y el grado de satisfacción y equilibrio respecto a ellos. <br><br>La Rueda de Vida te ayudará a valorar tu grado de felicidad en los distintos apartados de la vida. La Rueda de la Vida es también llamada por algunos autores como círculo de la vida.</p><br>
+            </div>
+            <div class="img-container">
+                <img src="./static/IMG/rueda_vida.jpg" alt="La cabeza y el torso de un esqueleto de dinosaurio;
+                tiene una cabeza grande con dientes largos y afilados" width="600" height="341"/>
+            </div>
+            
         </section>
+        <div class="tres">
+            <p class="tres"><a href="{{ url_for('persona') }}" target="_blank">Visita el formulario</a></p><br>
+        </div>
+        <!--p class="tres"><a href="{{ url_for('persona') }}" target="_blank">Visita el formulario</a></p><br-->
+        
     </main>
-
-<p><a href="{{ url_for('persona') }}" target="_blank">Visita el formulario</a></p>
-<footer>
-    <p>&copy; 2025 Rueda de la Vida</p>
-</footer>
+    <footer>
+        <p>&copy; 2025 Rueda de la Vida</p>
+    </footer>
 </body>
 </html>

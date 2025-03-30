@@ -23,7 +23,7 @@ def nosotros():
     return render_template("nosotros.html")
 
 # Página de contacto con formulario
-@app.route("/contacto", methods=['GET', 'POST'])
+""" @app.route("/contacto", methods=['GET', 'POST'])
 def contacto():
     if request.method == 'POST':
         nombre = request.form['nombre']
@@ -34,20 +34,58 @@ def contacto():
         db = get_db_connection()
         cursor = db.cursor()
         cursor.execute("INSERT INTO mensaje (nombre, email, mensaje) VALUES (%s, %s, %s)", (nombre, email, mensaje))
+        #sql1 = """"""INSERT INTO mensaje (nombre, email, mensaje) VALUES (%s, %s, %s)""""""
+        #valors =  (nombre, email, mensaje)              
+        #cursor.execute(sql1, valors)
+        #cursor.execute()
+        
         db.commit()
         cursor.close()
         db.close()
 
         return redirect(url_for('mensajes'))  # Redirigir a la página de mensajes
 
+    return render_template("contacto.html") """
+
+#inicio prueba
+@app.route("/contacto")
+def contacto():
     return render_template("contacto.html")
+
+@app.route("/contacto", methods=['POST'])
+def contact():
+    #request.method == 'POST':
+    nombre = request.form['nombre']
+    email = request.form['email']
+    mensaje = request.form['mensaje']
+
+        # Conectar a la BD y guardar el mensaje
+    db = get_db_connection()
+    cursor = db.cursor()
+    #cursor.execute("INSERT INTO mensaje (nombre, email, mensaje) VALUES (%s, %s, %s)", (nombre, email, mensaje))
+    sql1 = """INSERT INTO mensaje (nombre, email, mensaje) VALUES (%s, %s, %s)"""
+    valors =  (nombre, email, mensaje)              
+    cursor.execute(sql1, valors)
+        #cursor.execute()
+        
+    db.commit()
+    cursor.close()
+    db.close()
+
+    return redirect(url_for('mensajes'))  # Redirigir a la página de mensajes
+
+    #return render_template("contacto.html")
+
+#fin prueba
 
 # Página para ver mensajes almacenados
 @app.route('/mensajes')
 def mensajes():
     db = get_db_connection()
     cursor = db.cursor()
-    cursor.execute("SELECT id, nombre, email, mensaje FROM mensaje ORDER BY id DESC")
+    cursor.execute("SELECT * FROM mensaje")
+    #cursor.execute("SELECT nombre, email, mensaje FROM mensaje ORDER BY id DESC")
+    #cursor.execute("SELECT nombre, email, mensaje FROM mensaje ORDER BY nombre DESC")
     mensajes = cursor.fetchall()
     cursor.close()
     db.close()

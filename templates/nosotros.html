@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/nosotros.css">
 </head>
 <body>
     <header>
         <h1>Nosotros</h1>
         <nav>
-            <a href="/">Inicio</a>
+            <!--a href="/">Inicio</a>
             <a href="{{ url_for('nosotros') }}">Nosotros</a>
             <a href="{{ url_for('contacto') }}">Contacto</a>
+            <a href="{{ url_for('persona') }}">Evaluacion</a-->
+            <a href="/">Inicio</a>
+            <a href="/nosotros">Nosotros</a>
+            <a href="/contacto">Contacto</a>
             <a href="{{ url_for('persona') }}">Evaluacion</a>
         </nav>
     </header>
     <main>
-        <h2>Misión y Visión</h2>
-        <p>Somos una empresa dedicada a la mejora del bienestar de las personas, ofreciendo herramientas para evaluar y equilibrar las diferentes áreas de la vida.</p>
+        <h3>Misión</h3>
+        <p>En los Supermercados AgroCrédito Fácil trabajamos día a día para hacerle fácil la vida a nuestros clientes. Por eso, ponemos a su disposición un amplio portafolio de productos para el agro, la finca, las mascotas y muchos más.Contamos con personal técnico y especializado en cada una de las áreas de servicio: agrónomos, veterinarios, zootecnistas, técnicos en maquinaria, entre otros temas, para así brindar la asesoría que requieren nuestros clientes.</p>
+        <h3>Visión</h3>
+        <p>Para el año 2030 AgroCrédito Fácil será una empresa con liderazgo e innovación en la venta de productos y servicios del sector agrícola en Colombia. Trabajamos día a día para hacerle fácil la vida a nuestros clientes. Por eso, ponemos a su disposición un amplio portafolio de productos para el agro, la finca, las mascotas y muchos más.</p>
     </main>
     <footer>
-        <p>&copy; 2025 Rueda de la Vida</p>
+        <p class="pie">&copy; 2025 Rueda de la Vida</p>
     </footer>
 </body>
 </html>
