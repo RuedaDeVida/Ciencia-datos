@@ -1,5 +1,9 @@
 from flask import Flask, request, render_template, redirect, url_for
 import pymysql
+#import mysql.connector
+import csv
+import json
+import os
 
 app = Flask(__name__)
 
@@ -23,6 +27,8 @@ def nosotros():
     return render_template("nosotros.html")
 
 # Página de contacto con formulario
+
+
 """ @app.route("/contacto", methods=['GET', 'POST'])
 def contacto():
     if request.method == 'POST':
@@ -110,6 +116,41 @@ def procesar():
     ocio = request.form["ocio"]
     trabajo = request.form["trabajo"]
     dinero = request.form["dinero"]
+
+#nuevo
+# Guardar en archivo JSON
+    data = {
+        "nombre": nombre,
+        "edad": edad,
+        "salud": salud,
+        "desarrollo": desarrollo,
+        "amistad": amistad,
+        "hogar": hogar,
+        "amor": amor,
+        "ocio": ocio,
+        "trabajo": trabajo,
+        "dinero": dinero
+    }
+
+    # Guardar en un archivo JSON
+    if os.path.exists('resultados.json'):
+        with open('resultados.json', 'r') as file:
+            resultados = json.load(file)
+    else:
+        resultados = []
+
+    resultados.append(data)
+    with open('resultados.json', 'w') as file:
+        json.dump(resultados, file, indent=4)
+
+    # Guardar en un archivo CSV
+    with open('resultados.csv', 'a', newline='') as csvfile:
+        fieldnames = ['nombre', 'edad', 'salud', 'desarrollo', 'amistad', 'hogar', 'amor', 'ocio', 'trabajo', 'dinero']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writerow(data)
+
+#nuevo
+
 
     # Conectar a la BD
     db = get_db_connection()

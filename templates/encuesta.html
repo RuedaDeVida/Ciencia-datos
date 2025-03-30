@@ -11,11 +11,12 @@
         <h1>Respuestas de la Encuesta</h1>
         <nav>
             <a href="/">Inicio</a>
-            <a href="/nosotros">Nosotros</a>
-            <a href="/contacto">Contacto</a>
+            <a href="{{ url_for('nosotros') }}">Nosotros</a>
+            <a href="{{ url_for('contacto') }}">Contacto</a>
             <a href="{{ url_for('persona') }}">Evaluacion</a>
         </nav>
     </header>
+    <br>
     <table border="1">
         <tr>
             <th>ID</th>
@@ -47,9 +48,13 @@
         
         {% endfor %}
     </table>
-    
-    
-    <a href="/">Volver</a>
+    <div class="piepag">
+        <p><a href="{{ url_for('persona') }}" target="_blank">Regresar a evaluación</a></p>    
+    </div>
+    <!--a href="/">Volver</a-->
+    <footer>
+        <p>&copy; 2025 - Rueda de la Vida</p>
+    </footer>
 </body>
 </html>
 
