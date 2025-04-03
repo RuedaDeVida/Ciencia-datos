@@ -151,7 +151,6 @@ def procesar():
 
 #nuevo
 
-
     # Conectar a la BD
     db = get_db_connection()
     cursor = db.cursor()
