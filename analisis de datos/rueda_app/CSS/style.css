@@ -1,0 +1,153 @@
+*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    background: white;
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+.intro h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+.intro a {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 18px;
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.intro a:hover {
+    color: #FF8C00;
+}
+
+.nota h2{
+    text-align: center;
+    max-width: 800px; 
+    margin: 20px auto;
+}
+.nota p{
+    text-align: center;
+    max-width: 600px; 
+    margin: 20px auto;
+    line-height: 1.2;
+}
+
+.img-container {
+    text-align: center;
+    float:left;
+    margin-right: 40px;
+    margin-top: 40px;
+  }
+
+.nota {
+    text-align: center;
+    float:left;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+#texto{
+    display: inline-block;
+    vertical-align: top;
+}  
+
+/* Diseño para la sección con la imagen y el texto */
+section {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.nota p{
+    width: 80%;  /* Ajusta el ancho del texto */
+    padding: 10px;
+    text-align: justify;
+}
+
+.nota h2 {
+    color: #4CAF50;
+}
+
+.img-container {
+    width: 45%;  /* Ajusta el ancho de la imagen */
+    text-align: center;
+}
+
+.img-container img {
+    max-width: 100%;  /* Asegura que la imagen no se desborde */
+    height: auto;
+    border-radius: 8px;  /* Opcional: bordes redondeados para la imagen */
+}
+
+/*footer {
+    width: 100%;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+}*/
+.tres p{
+    text-align: center;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
